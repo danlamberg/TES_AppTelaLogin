@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- ImageView do Logo -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="71dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="312dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="75dp"
+        android:gravity="center"
+        android:text="Bem Vindo Trilheiro"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <!-- Adicione os CheckBox para cada item -->
+    <CheckBox
+        android:id="@+id/checkBoxMochila"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mochila"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <CheckBox
+        android:id="@+id/checkBoxBarraca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Barraca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxMochila" />
+
+    <CheckBox
+        android:id="@+id/checkBoxLanterna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lanterna de mão/Lanterna de Cabeça"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxBarraca" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Câmera fotográfica"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxLanterna" />
+
+    <CheckBox
+        android:id="@+id/checkBoxRepelente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repelente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxCamera" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCarregador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carregador de celular/PowerBank"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxRepelente" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCalcado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calçado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxCarregador" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCamiseta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Camiseta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxCalcado" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCalca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calça"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxCamiseta" />
+
+    <CheckBox
+        android:id="@+id/checkBoxFogareiro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fogareiro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxCalca" />
+
+    <CheckBox
+        android:id="@+id/checkBoxGasFogareiro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gás fogareiro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxFogareiro" />
+
+    <CheckBox
+        android:id="@+id/checkBoxOutros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Outros"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxGasFogareiro" />
+
+    <EditText
+        android:id="@+id/editTextOutros"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Digite algo aqui"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxOutros"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/checkBoxOutros"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBoxOutros" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="134dp"
+        android:layout_marginBottom="75dp"
+        android:text="Itens de acampamento"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxLanterna"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxMochila"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
