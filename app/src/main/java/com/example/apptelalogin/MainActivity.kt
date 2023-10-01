@@ -23,6 +23,11 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+    override fun onRestart() {
+        super.onRestart()
+        binding.editEmail.setText("")
+        binding.editSenha.setText("")
+    }
 
 }
 
